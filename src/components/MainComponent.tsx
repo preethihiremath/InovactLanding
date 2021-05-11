@@ -4,7 +4,7 @@
 import React from 'react';
 import Landing from '../pages/Landing';
 
-const MainComponent = (): JSX.Element => {
+const MainComponent : React.FunctionComponent = (): JSX.Element => {
 	return (
 		<div>
 			<Landing />

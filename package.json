@@ -24,7 +24,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "serve":"NODE_ENV=development npx netlify dev",
+    "serve": "NODE_ENV=development npx netlify dev",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,6 +49,6 @@
     ]
   },
   "devDependencies": {
-    "netlify-cli": "^3.29.2"
+    "netlify-cli": "^3.29.3"
   }
 }

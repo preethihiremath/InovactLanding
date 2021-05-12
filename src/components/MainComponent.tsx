@@ -3,11 +3,13 @@
 
 import React from 'react';
 import Landing from '../pages/Landing';
+import TestButtons from './test';
 
 const MainComponent : React.FunctionComponent = (): JSX.Element => {
 	return (
 		<div>
 			<Landing />
+			<TestButtons/>
 		</div>
 	);
 };

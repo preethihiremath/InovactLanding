@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { SECRET } = require('../utils/config');
+const { SECRET } = require('../../utils/config');
 
 module.exports = function checkAuth(event) {
 	const { cookie } = event.headers;
@@ -12,7 +12,6 @@ module.exports = function checkAuth(event) {
 		const authToken = cookie.replace('jwt=', '');
 		try {
 			let decodedToken = jwt.decode(authToken, { complete: true });
-			console.log(decodedToken);
 		} catch (err) {
 			// const reason = '';
 			return reject(new Error('malformed token'));

@@ -1,5 +1,5 @@
 const middy = require('middy');
-const requireAuth = require('./middlewares/requireAuth');
+const requireAuth = require('./middlewares/auth/requireAuth');
 
 const protectedFunction = async (event, context) => {
 	return {

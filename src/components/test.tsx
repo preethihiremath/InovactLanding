@@ -8,14 +8,14 @@ const TestButtons = (): JSX.Element => {
 			{process.env.NODE_ENV !== 'development' ? (
 				<div>
 					<a
-						href='https://inovact-authentication-serverless/api/auth/github'
+						href='https://inovact-authentication-serverless.netlify.app/api/auth/github'
 						className='w3-button w3-black'
 					>
 						GITHUB
 					</a>
 					&ensp;
 					<a
-						href='https://inovact-authentication-serverless/api/auth/google'
+						href='https://inovact-authentication-serverless.netlify.app/api/auth/google'
 						className='w3-button w3-black'
 					>
 						GOOGLE

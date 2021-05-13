@@ -35,7 +35,7 @@ const TestButtons = (): JSX.Element => {
 						href='http://localhost:8888/.netlify/functions/auth/google'
 						className='w3-button w3-black'
 					>
-						GITHUB
+						GOOGLE
 					</a>
 				</div>
 			)}

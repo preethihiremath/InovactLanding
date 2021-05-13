@@ -24,8 +24,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # local
-*.lock
+yarn
 package-lock.json
 
 # Local Netlify folder
 .netlify
+
+# functions
+functions/node_modules
+functions/yarn

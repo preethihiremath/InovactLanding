@@ -1,6 +1,7 @@
 const { sign } = require('jsonwebtoken');
 const GitHubStrategy = require('passport-github2').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const LocalStrategy = require('passport-local').Strategy;
 const passport = require('passport');
 const passportJwt = require('passport-jwt');
 
@@ -18,6 +19,15 @@ function authJwt(email) {
 	return sign({ user: { email } }, SECRET);
 }
 
+//* local passport strategy
+passport.use(
+	new LocalStrategy(function (username, password, done) {
+		// ? here comes the logic to check for user's existence
+		// ? and store if not present along with the passport verification.
+	})
+);
+
+//* google passport strategy
 passport.use(
 	new GoogleStrategy(
 		{
@@ -41,6 +51,7 @@ passport.use(
 	)
 );
 
+//* github passport strategy
 passport.use(
 	new GitHubStrategy(
 		{
@@ -64,6 +75,7 @@ passport.use(
 	)
 );
 
+//* jwt strategy
 passport.use(
 	new passportJwt.Strategy(
 		{

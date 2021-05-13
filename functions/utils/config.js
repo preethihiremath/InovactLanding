@@ -25,4 +25,8 @@ exports.GITHUB_CLIENT_SECRET =
 		? '4947a363b956efa15ada30cb6262e8065afd1675'
 		: process.env.GITHUB_CLIENT_SECRET;
 
+// Stripe Credentials
+exports.STRIPE_PUBLISHABLE_KEY = process.env.STRIPE_PUBLISHABLE_KEY;
+exports.STRIPE_SECRET = process.env.STRIPE_SECRET;
+
 exports.SECRET = process.env.SECRET || 'SUPERSECRET';

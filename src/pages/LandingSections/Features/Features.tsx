@@ -53,7 +53,7 @@ const Features: React.FC = () =>{
                                     </Card>
                                 </Box>
                               ))}
-                      </Grid>  
+                        </Grid>  
                 </Container>
              </Grid>
       </Container>

@@ -16,8 +16,9 @@ const useStyles = makeStyles({
       '0px 60px',
     textAlign: 'center',
     minHeight: '200px',
-    maxWidth:'270px',
+    maxWidth:'250px',
     marginTop:'10px',
+    marginRight:'10px',
     '@media screen and (max-width:1200px )':{
       minHeight: '10%',
       maxWidth:'10%',

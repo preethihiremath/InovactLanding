@@ -5,7 +5,6 @@ import useStyles from './styles';
 
 import Image1 from '../assets/img/business-profit.png';
 import DrawingArrow from '../assets/img/drawing-arrow.svg';
-import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 const About: React.FC<{}>=() =>{
   const styles = useStyles();
@@ -19,16 +18,12 @@ const About: React.FC<{}>=() =>{
             <Box className={styles.contentBox}>
                 <h1 className={styles.webTitle}>Who we are ?</h1>
                 <Typography component="p" className={styles.webText}>
-                  INOVACT-social is the one-stop 
-                  socializing website created by 
-                  the students, for the students
-                 </Typography>
-                <Box className={styles.webPoint}><KeyboardArrowRightIcon className={styles.icon} /> Connect with various other undergraduates and post-graduates studying across India .</Box>
-                 <Box className={styles.webPoint}><KeyboardArrowRightIcon className={styles.icon} />Build a highly reliable network ranging from enthusiastic start-up entrepreneurs to highly qualified teachers and individuals, </Box>
+                We are young and enthusiastic entrepreneurs 
+                aspiring to cover the gap between students and the industry.
+                </Typography>
+            
             </Box>
-
         </Container>
-      
         <Box className={styles.bottomArrow}>
           <img src={DrawingArrow} alt="Arrow" />
         </Box>

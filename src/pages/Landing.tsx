@@ -11,17 +11,7 @@ import { useHistory,Link,RouteComponentProps } from 'react-router-dom';
 import logo from './LandingSections/assets/img/logo.png';
 import  './LandingSections/Navbar/styles.css';
 
-{/*interface Props{
-  onClick: any;
- ReactElement:any;
-  toggle:React.MouseEventHandler<HTMLAnchorElement> | undefined
-}
 
-interface dim {
-    height: number;
-    offsetTop: number;
-    offsetBottom: number;
-}*/}
 
 const getDimensions = (ele: any) => {
     const { height } = ele.getBoundingClientRect();

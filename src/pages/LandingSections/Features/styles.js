@@ -5,7 +5,7 @@ export default  makeStyles({
       textAlign: 'center',
       fontWeight:'400',
       marginBottom:'30px',
-      paddingTop:'100px',
+      paddingTop:'150px',
       color:'black',
       fontFamily:'poppins',
       '@media screen and (max-width:1200px )':{
@@ -27,18 +27,6 @@ export default  makeStyles({
       marginBottom:'30px',
       marginLeft:'-40px',
     },
-    featureCard: {
-      textAlign: 'center',
-      h4:{
-        marginTop:'30px', 
-        marginBottom:'30px',
-        marginLeft:'-40px',
-      },
-    
-      '@media screen and (max-width:1200px )':{  
-        fontSize:'24px'
-       },
-    },
     p: {
       margin: 0,
       fontSize: ['14px', null, null, '12px'],
@@ -51,163 +39,7 @@ export default  makeStyles({
       pt:'140px',
       mt:'30px',
       height:'auto',
-    
-      '.feature-card:nth-of-type(1)': {
-        '.feature-icon': {
-          width:'80px',
-          height:'80px',
-          backgroundImage:
-            'linear-gradient(319.4deg, #2848BD 5.17%, rgba(8, 152, 231, 0.5) 94.34%)',
-        }, 
-      },
-      'p.feature-card:nth-of-type(1)': {
-        '.feature-icon': {
-          width:'80px',
-          height:'80px',
-          marginLeft:'30px',
-          backgroundImage:
-            'linear-gradient(319.4deg, #2848BD 5.17%, rgba(8, 152, 231, 0.5) 94.34%)',
-        },
-        
-      },
-  
-      '.feature-card:nth-of-type(2)': {
-        '.feature-icon': {
-          width:'80px',
-          height:'80px',
-          marginLeft:'-0px',
-          backgroundImage:
-            'linear-gradient(320.89deg, #2848BD 10.83%, rgba(8, 152, 231, 0.5) 88.7%)',
-            '@media screen and (max-width:600px)':{
-              marginLeft:'auto',
-                   },
-                   '@media screen and (min-width: 600px) and (max-width: 1100px)':{ 
-                    marginLeft:'auto',
-                  }
-        },
-        '.feature-title':{
-          position:'relative',
-          left:'-90px',
-          '@media screen and (max-width:1200px)':{
-          left:'0px',
-               }
-        },
-       
-      },
-   
-      '.feature-card:nth-of-type(3)': {
-        '.feature-icon': {
-          width:'80px',
-          height:'80px',
-          backgroundImage:
-            'linear-gradient(319.4deg, #2848BD 5.17%, rgba(8, 152, 231, 0.5) 94.34%)',
-        },
-      }, 
-   
-      '.feature-card:nth-of-type(4)': {
-        '.feature-icon': {
-          width:'80px',
-          height:'80px',
-          marginLeft:'-0px',
-          backgroundImage:
-          'linear-gradient(319.4deg, #2848BD 5.17%, rgba(8, 152, 231, 0.5) 94.34%)',
-          '@media screen and (max-width:1200px)':{
-            marginLeft:'auto',
-          },
-          '@media screen and (min-width: 600px) and (max-width: 1100px)':{
-            ml:'auto',
-          }
-        },
-        '.feature-title':{
-         position:'relative',
-         left:'-90px',
-         '@media screen and (max-width:1200px)':{
-            left:'auto',
-         }
-          }
-      },
-      '.learning .feature-card:nth-of-type(2)': {
-        '.feature-icon': {
-          width:'80px',
-          height:'80px',
-          backgroundImage:
-            'linear-gradient(319.4deg, #2848BD 5.17%, rgba(8, 152, 231, 0.5) 94.34%)',
-            '@media screen and (max-width:400px)':{
-              margin:'0px ',
-              mx:'auto',
-            },
-            '@media screen and (min-width: 400px) and (max-width: 600px)':{
-              top:'0px',
-              left:'0px',
-              mx:'auto',
-                        },
-            '@media screen and (min-width: 600px) and (max-width: 800px)':{
-              top:'0px',
-              left:'0px',
-              margin:'auto',
-            },
-            '@media screen and (min-width: 800px) and (max-width: 1000px)':{
-              top:'0px',
-              left:'0px',
-              margin:'auto',
-            },
-         
-        },
-        '.feature-title':{
-          maxWidth:'100%',
-          justifyContent:'center',
-        }
-      },
-      '.learning .feature-card:last-of-type':{
-        '.feature-icon': {
-           width:'80px',
-          height:'80px',
-          position:'relative',
-          left:'100px',  
-        '@media screen and (max-width: 600px)':{
-          top:'0px',
-          left:'0px',
-          mx:'auto',
-                    },
-        '@media screen and (min-width: 600px) and (max-width: 832px)':{
-          top:'0px',
-          left:'0px',
-          mx:'auto',
-        },
-        '@media screen and (min-width: 833px) and (max-width: 1000px)':{
-          top:'0px',
-          left:'100px',
-          mx:'auto',
-        }
-      },
-      '.feature-title':{
-        position:'relative',
-        left:'100px',
-       
-        '@media screen and (max-width:831px)':{
-        left:'0px',
-             }
-      }
-      },
     },
-   featureCards:{
-  
-   },
-   featureEachCard:{
-    boxShadow:'none',
-   },
-     featureCardsL:{
-    '&:nth-child(3)':{
-      width:'80px',
-      height:'80px',
-      position:'relative',
-      left:'85%',
-      '@media screen and (max-width:600px )':{
-        left:'60%',
-      },
-    },
-   },
-
     grid1: {
       display: 'grid',
       marginTop:'30px',
@@ -240,6 +72,40 @@ export default  makeStyles({
       },
       gridTemplateColumns: 'repeat(2, 1fr)',
     },
+    featureCards:{
+      '&:nth-child(2)':{
+        position:'relative',
+        right:'25%',
+        '@media screen and (max-width:1200px )':{
+          right:'0%',
+        }
+      },
+      '&:nth-child(4)':{
+        position:'relative',
+        right:'25%',
+        '@media screen and (max-width:1200px )':{
+          right:'0%',
+        }
+      },
+    },
+ 
+   featureEachCard:{
+    boxShadow:'none',
+   },
+     featureCardsL:{
+    '&:nth-child(3)':{
+      position:'relative',
+      left:'50%',
+      '@media screen and (max-width:600px )':{
+        left:'30%',
+      },
+    },
+   },
+   featureTitle:{
+    fontWeight:'600',
+    zIndex:'10',
+   },
+
     learningTitle: {
       fontSize:'30px',
       textAlign: 'center',
@@ -262,7 +128,7 @@ export default  makeStyles({
       justifyContent: 'center',
       alignItems: 'center',
       borderRadius: '50%',
-      background : '#020652',
+      background : '#0F4DA6',
       color:'white',
       '@media screen and (max-width:600px )':{
         borderRadius: '40px',

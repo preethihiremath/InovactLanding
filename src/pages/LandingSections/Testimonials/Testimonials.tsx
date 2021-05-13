@@ -41,9 +41,7 @@ const Testimonails: React.FC =()=>{
           additionalTransfrom={0}
           arrows={false}
           centerMode={false}
-          className=""
           containerClass="carousel-container"
-          dotListClass=""
           draggable
           infinite={true}
           autoPlay={true}
@@ -54,8 +52,7 @@ const Testimonails: React.FC =()=>{
           renderButtonGroupOutside
           renderDotsOutside={false}
           responsive={responsive}
-          showDots={false}
-          sliderClass=""
+          showDots={true}
           slidesToSlide={1}
            >
              {data.map((item) => (

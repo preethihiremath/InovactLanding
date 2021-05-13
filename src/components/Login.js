@@ -20,16 +20,11 @@ class Login extends Component {
   render() 
   {
     let params = new URLSearchParams(this.props.location.search); //pars query parametes
-
-    const { errors } = this.state;
     return (
-      params.get('login') && <Modal
-     >
-<section className="section">
+      params.get('login') && <Modal>
+      <section className="section">
         <div className='register-container'>
-  
           <div className='user signinBx'>
-          
             <div className='formBx'>
               <form onSubmit={this.onSubmit}>
               <div class="modal-header">
@@ -39,18 +34,16 @@ class Login extends Component {
                   }}>&times;</button>
               </div>
                 <input
-                  style={{ padding: '0 10px', margin: '8px 0' }}
+                  style={{ padding: '10px 10px', margin: '8px 0' }}
                   type='text'
                   id='email'
-                 
-                
                   placeholder='Email Address'
                 />
                 <span style={{ color: 'red' }}>
                  
                 </span>
                 <input
-                  style={{ padding: '0 10px', margin: '8px 0' }}
+                  style={{ padding: '5px 10px', margin: '8px 0' }}
                   type='password'
                   id='password'
                   placeholder='Password'

@@ -47,18 +47,12 @@ export default  makeStyles({
         fontSize: '40px',
         },
       },
-
-      tagline:{
-        fontSize:'20px',
-        fontWeight:'350',
-        marginTop:'10px',
-      },
-   
+      
       horizontal:{
       borderBottom: '2px solid #DCDCDC',
       width:'150px',
       borderRadius:'25%',
-      marginTop:'30px',
+      marginTop:'10px',
       marginBottom:'20px',
       marginLeft:'-60px',
       '@media screen and (max-width:1200px)':{

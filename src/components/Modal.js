@@ -1,4 +1,4 @@
-import React, { Component,CSSProperties } from "react";
+import React, { Component} from "react";
 import { createPortal } from "react-dom";
 
 const modalStyle={

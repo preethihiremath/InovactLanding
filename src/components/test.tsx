@@ -10,16 +10,16 @@ const TestButtons = (): JSX.Element => {
 				<div>
 					<a
 						href='https://inovact-authentication-serverless/api/auth/github'
-						className='w3-button w3-black'
+						
 					>
-						GITHUB
+						  <img src={gitIcon} alt='git'  />
 					</a>
 					&ensp;
 					<a
 						href='https://inovact-authentication-serverless/api/auth/google'
-						className='w3-button w3-black'
+						
 					>
-						GOOGLE
+						<img src={googleIcon} alt='google' />
 					</a>
 				</div>
 			) : (
@@ -29,13 +29,13 @@ const TestButtons = (): JSX.Element => {
 						href='http://localhost:8888/.netlify/functions/auth/github'
 						
 					>
-					  <img src={gitIcon} alt='git' width="35px" />
+					  <img src={gitIcon} alt='git'  />
 					</a>
 					&ensp;
 					<a
 						href='http://localhost:8888/.netlify/functions/auth/google'
 						
-					>  <img src={googleIcon} alt='google' width="35px" />
+					>  <img src={googleIcon} alt='google' />
 					</a>
 				</div>
 			)}

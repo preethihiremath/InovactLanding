@@ -30,7 +30,7 @@ const Features: React.FC = () =>{
                               <Box className={`${styles.icon} `}>
                                 <img src={feature.icon} alt="" width="40px" height="40px" />
                               </Box>
-                              <p className="feature-title" >{feature.title}</p>
+                              <p className={styles.featureTitle} >{feature.title}</p>
                               </Card>
                             </Box> 
                           ))}
@@ -49,7 +49,7 @@ const Features: React.FC = () =>{
                                     <Box  className={`${styles.icon} feature-icon`}>
                                       <img src={feature.icon} alt={feature.title}  width="40"/>
                                     </Box>
-                                    <Typography className="feature-title">{feature.title}</Typography>
+                                    <Typography className={styles.featureTitle}>{feature.title}</Typography>
                                     </Card>
                                 </Box>
                               ))}

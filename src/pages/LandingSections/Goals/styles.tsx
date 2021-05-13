@@ -29,8 +29,8 @@ export default  makeStyles({
         display:'grid',
         width:'100%',
         gridTemplateColumns: 'repeat(3, 1fr)',
-        marginTop:"20px",
-        padding:'10px 0px 10px 0px',
+        marginTop:"40px",
+        padding:'10px 30px 10px 30px',
        
         '@media screen and (max-width :900px)':{
           gridTemplateColumns: 'repeat(1, 1fr)',
@@ -48,9 +48,9 @@ export default  makeStyles({
       },
       iconBox: {
         flexShrink: 0,
-        fontSize: '50px',
+        fontSize: '40px',
         letterSpacing: 'heading',
-        margin: '0px 30px 0px 30px',
+        margin: '0px 20px 0px 30px',
         '@media screen and (max-width :900px)':{
           display:'none'
         }
@@ -75,7 +75,6 @@ export default  makeStyles({
       fontWeight:300,
       textAlign:'left',
       '@media screen and (max-width :900px)':{
-    
     margin:'10px 30px',
       },
     },

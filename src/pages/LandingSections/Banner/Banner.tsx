@@ -15,14 +15,12 @@ export const Banner: React.FC<{}>=() =>
                     <h1
                         className={styles.webTitle}>
                         Inovact 
-                        <br />
-                    <Typography className={styles.tagline}>Build a skill for the future </Typography>
                     </h1>
                     
                     <Box className={styles.horizontal}></Box>
                 
                     <Typography   className={styles.webText}>
-                    INOVACT-social is the one-stop socializing website created by the students, for the students. 
+                    Inovact Social is the one-stop networking platform connecting students , mentors and investors.
                     </Typography >
                 </Box>
             </Grid>

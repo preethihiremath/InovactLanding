@@ -2,7 +2,7 @@ import { FC } from 'react';
 // import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { Box, Grid, Typography } from '@material-ui/core';
 
-import useStyles from './styles';
+import { useStyles } from './styles';
 
 const data = [
 	{

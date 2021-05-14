@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import About from './LandingSections/About/About';
-import Achivements from './LandingSections/Achivement/Achivement';
-import logo from './LandingSections/assets/img/logo.png';
-import { Banner } from './LandingSections/Banner/Banner';
-import Features from './LandingSections/Features/Features';
-import Footer from './LandingSections/Footer/Footer';
-import Goals from './LandingSections/Goals/Goals';
-import './LandingSections/Navbar/styles.css';
-import Testimonial from './LandingSections/Testimonials/Testimonials';
+import About from '../components/LandingSections/About/About';
+import Achivements from '../components/LandingSections/Achivement/Achivement';
+import logo from './components/LandingSections/assets/img/logo.png';
+import { Banner } from '../components/LandingSections/Banner/Banner';
+import Features from '../components/LandingSections/Features/Features';
+import Footer from '../components/LandingSections/Footer/Footer';
+import Goals from '../components/LandingSections/Goals/Goals';
+import '../components/LandingSections/Navbar/styles.css';
+import Testimonial from '../components/LandingSections/Testimonials/Testimonials';
 
 const getDimensions = (ele: any) => {
 	const { height } = ele.getBoundingClientRect();

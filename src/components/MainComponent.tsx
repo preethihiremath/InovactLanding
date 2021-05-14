@@ -2,14 +2,16 @@
 // set up routing in App.tsx
 
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Landing from '../pages/Landing';
-import TestButtons from './test';
-
-const MainComponent : React.FunctionComponent = (): JSX.Element => {
+import Login from './Login';
+const MainComponent: React.FunctionComponent = (): JSX.Element => {
 	return (
 		<div>
-			<Landing />
-			<TestButtons/>
+			<Router>
+				<Route exact path='/' component={Landing} />
+				<Route path='/' component={Login} />
+			</Router>
 		</div>
 	);
 };

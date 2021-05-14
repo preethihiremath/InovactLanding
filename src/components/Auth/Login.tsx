@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
-import TestButtons from './test';
-import '../styles/login.css';
+import TestButtons from '../test';
+import '../../styles/login.css';
 
 type LoginState = {
 	email: string;

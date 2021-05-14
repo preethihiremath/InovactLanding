@@ -4,7 +4,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Landing from '../pages/Landing';
-import Login from './Login';
+import Login from './Auth/Login';
 const MainComponent: React.FunctionComponent = (): JSX.Element => {
 	return (
 		<div>

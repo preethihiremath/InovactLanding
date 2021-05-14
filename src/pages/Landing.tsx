@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import About from '../components/LandingSections/About/About';
-import Achivements from '../components/LandingSections/Achivement/Achivement';
-import logo from './components/LandingSections/assets/img/logo.png';
-import { Banner } from '../components/LandingSections/Banner/Banner';
-import Features from '../components/LandingSections/Features/Features';
-import Footer from '../components/LandingSections/Footer/Footer';
-import Goals from '../components/LandingSections/Goals/Goals';
-import '../components/LandingSections/Navbar/styles.css';
-import Testimonial from '../components/LandingSections/Testimonials/Testimonials';
+import About from '../components/Landing/About/About';
+import Achivements from '../components/Landing/Achivement/Achivement';
+import logo from '../components/LandingSections/assets/img/logo.png';
+import { Banner } from '../components/Landing/Banner/Banner';
+import Features from '../components/Landing/Features/Features';
+import Footer from '../components/Landing/Footer/Footer';
+import Goals from '../components/Landing/Goals/Goals';
+import '../components/Landing/Navbar/styles.css';
+import Testimonial from '../components/Landing/Testimonials/Testimonials';
 
 const getDimensions = (ele: any) => {
 	const { height } = ele.getBoundingClientRect();
@@ -49,9 +49,8 @@ const Landing: React.FC = ({ match, url }: any): JSX.Element => {
 			const { height: headerHeight } = getDimensions(headerRef.current);
 			const scrollPosition = window.scrollY + headerHeight;
 			const selected = sectionRefs.find(({ section, ref }): any => {
-				const ele = ref.current;
-				if (ele) {
-					const { offsetBottom, offsetTop } = getDimensions(ele);
+				if (ref.current) {
+					const { offsetBottom, offsetTop } = getDimensions(ref.current);
 					return scrollPosition > offsetTop && scrollPosition < offsetBottom;
 				}
 			});

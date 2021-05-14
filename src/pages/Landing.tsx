@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import About from '../components/Landing/About/About';
 import Achivements from '../components/Landing/Achivement/Achivement';
-import logo from '../components/LandingSections/assets/img/logo.png';
+import logo from '../components/Landing/assets/img/logo.png';
 import { Banner } from '../components/Landing/Banner/Banner';
 import Features from '../components/Landing/Features/Features';
 import Footer from '../components/Landing/Footer/Footer';

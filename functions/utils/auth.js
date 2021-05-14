@@ -41,10 +41,6 @@ passport.use(
 	)
 );
 
-<<<<<<< HEAD
-//* github passport strategy
-=======
->>>>>>> preethi-landing
 passport.use(
 	new GitHubStrategy(
 		{
@@ -68,10 +64,6 @@ passport.use(
 	)
 );
 
-<<<<<<< HEAD
-//* jwt strategy
-=======
->>>>>>> preethi-landing
 passport.use(
 	new passportJwt.Strategy(
 		{

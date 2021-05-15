@@ -8,7 +8,7 @@ const TestButtons = (): JSX.Element => {
 	return (
 		<div>
 			{process.env.NODE_ENV !== 'development' ? (
-				<div>
+				<div className='signup-icons'>
 					<a href='https://inovact-authentication-serverless/api/auth/github'>
 						<img src={gitIcon} alt='git' />
 					</a>

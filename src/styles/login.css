@@ -45,7 +45,7 @@ section .register-container .user {
 	display: flex;
 }
 
-section .register-container .user .formBx {
+section .register-container div > .formBx {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -54,7 +54,6 @@ section .register-container .user .formBx {
 	justify-content: center;
 	align-items: center;
 	padding: 40px;
-
 	transition: 0.5s;
 }
 
@@ -89,6 +88,11 @@ section .register-container .user .formBx form h2 {
 	letter-spacing: 2px;
 	text-align: center;
 	color: #555;
+}
+
+section .register-container div > .formBx form {
+	width: 100%;
+	height: 100%;
 }
 
 section .register-container .user .formBx form input {

@@ -27,8 +27,8 @@ const Features: React.FC = () => {
 							</h2>
 
 							<Grid className={`${styles.grid1}`}>
-								{SOCIAL.map((feature) => (
-									<Box className={`${styles.featureCards} `}>
+								{SOCIAL.map((feature, i) => (
+									<Box key={i} className={`${styles.featureCards} `}>
 										<Card className={`${styles.featureEachCard} `}>
 											<Box className={`${styles.icon} `}>
 												<img
@@ -54,8 +54,8 @@ const Features: React.FC = () => {
 								</span>
 							</h2>
 							<Grid className={`${styles.grid2}`}>
-								{LEARNING.map((feature) => (
-									<Box className={`${styles.featureCardsL}`}>
+								{LEARNING.map((feature, i) => (
+									<Box key={i} className={`${styles.featureCardsL}`}>
 										<Card className={styles.featureEachCard}>
 											<Box className={`${styles.icon} feature-icon`}>
 												<img

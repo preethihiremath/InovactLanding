@@ -91,7 +91,6 @@ const Landing: React.FC = ({ match, url }: any): JSX.Element => {
 					<img src={logo} alt='Logo' />
 					<span className='logoname'>Inovact</span>
 				</Link>
-
 				<ul>
 					<li className='home'>
 						<a
@@ -107,7 +106,6 @@ const Landing: React.FC = ({ match, url }: any): JSX.Element => {
 							Home
 						</a>
 					</li>
-
 					<li>
 						<a
 							className={`header_link ${

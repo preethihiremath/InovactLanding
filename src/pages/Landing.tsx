@@ -48,10 +48,13 @@ const Landing: React.FC = ({ match, url }: any): JSX.Element => {
 		const handleScroll = () => {
 			const { height: headerHeight } = getDimensions(headerRef.current);
 			const scrollPosition = window.scrollY + headerHeight;
+			//ts-ignore
 			const selected = sectionRefs.find(({ section, ref }): any => {
 				if (ref.current) {
 					const { offsetBottom, offsetTop } = getDimensions(ref.current);
 					return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+				} else {
+					return null;
 				}
 			});
 
@@ -67,7 +70,7 @@ const Landing: React.FC = ({ match, url }: any): JSX.Element => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-	}, []);
+	}, [sectionRefs, visibleSection]);
 
 	window.addEventListener('scroll', function () {
 		let header: HTMLElement | null;

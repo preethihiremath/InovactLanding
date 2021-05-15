@@ -70,7 +70,8 @@ const Landing: React.FC = ({ match, url }: any): JSX.Element => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-	}, [sectionRefs, visibleSection]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	window.addEventListener('scroll', function () {
 		let header: HTMLElement | null;

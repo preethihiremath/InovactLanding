@@ -8,9 +8,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET);
 const { STRIPE_PUBLISHABLE_KEY } = require('./utils/config');
 
 exports.handler = async (event, context, callback) => {
-	// const { priceId } = event.queryStringParameters;
-	const { priceId } = JSON.parse(event.body);
-
 	if (event.httpMethod !== 'POST') {
 		return {
 			statusCode: 400,
@@ -20,6 +17,8 @@ exports.handler = async (event, context, callback) => {
 			},
 		};
 	}
+
+	const { priceId } = JSON.parse(event.body);
 
 	try {
 		const session = await stripe.checkout.sessions.create({

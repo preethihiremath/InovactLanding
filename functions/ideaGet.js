@@ -1,9 +1,7 @@
 const { query } = require('./utils/hasura');
 const client = require('./utils/redis');
 
-exports.handler = async (event, context, callback) => {
-	// context.callbackWaitsForEmptyEventLoop = false;
-
+exports.handler = async (event) => {
 	const { id } = event.queryStringParameters;
 
 	client.on('error', (error) => {

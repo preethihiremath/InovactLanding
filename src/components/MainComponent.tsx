@@ -5,12 +5,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Landing from '../pages/Landing';
 import Login from './Auth/Login';
+import Projects from './Project';
 const MainComponent: React.FunctionComponent = (): JSX.Element => {
 	return (
 		<div>
 			<Router>
 				<Route exact path='/' component={Landing} />
 				<Route path='/' component={Login} />
+				<Route path='/projects' component={Projects} />
 			</Router>
 		</div>
 	);

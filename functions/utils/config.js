@@ -24,5 +24,6 @@ exports.STRIPE_SECRET = process.env.STRIPE_SECRET;
 exports.SECRET = process.env.SECRET;
 
 exports.HASURA_API = process.env.HASURA_API;
+exports.HASURA_ADMIN_SECRET = process.env.HASURA_ADMIN_SECRET;
 exports.emailRegEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 exports.passwordRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;

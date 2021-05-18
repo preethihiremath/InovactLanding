@@ -13,3 +13,26 @@ export const signIn = (FormData: signinFormData) =>
 
 export const signUp = (FormData: any) =>
 	API.post('/auth/local/signup', FormData);
+
+export const fetchProject = (id: number) => API.get(`/projectGet?id=${id}`);
+
+export const fetchProjects = () => API.get(`/projectGetAll`);
+
+export const fetchProjectsBySearch = (searchQuery: any) =>
+	API.get(
+		`/project/search?searchQuery=${searchQuery.search || 'none'}&tags=${
+			searchQuery.tags
+		}`
+	);
+
+export const createProject = (newProject: object) =>
+	API.post('/project', newProject);
+
+export const likeProject = (id: number, userId: number) =>
+	API.patch(`/projectLike`, { id, userId });
+
+export const updateProject = (id: number, updatedProject: object) =>
+	API.patch(`/projectUpdate`, { id, updatedProject });
+
+export const deleteProject = (id: number) =>
+	API.delete(`/projectDelete?id=${id}`);

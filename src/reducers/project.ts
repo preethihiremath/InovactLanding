@@ -8,23 +8,31 @@ import {
 	LIKE_PROJECT,
 	UPDATE_PROJECT,
 } from '../constants/actionTypes';
-import { actiontype } from '../constants/interfaceTypes';
+import { actiontype, project } from '../constants/interfaceTypes';
 
 //? this will be done when get the request
-// interface projectInitialState {}
+interface projectInitialState {
+	projects: project[];
+	project: project;
+	isLoading: boolean;
+}
 
-export const projectReducer = (state: any, action: actiontype | any) => {
+export const projectReducer = (
+	state: projectInitialState,
+	action: actiontype | any
+) => {
+	console.log(action);
 	switch (action.type) {
 		case 'START_LOADING':
 			return { ...state, isLoading: true };
 		case 'END_LOADING':
 			return { ...state, isLoading: false };
 		case FETCH_PROJECT_ALL:
-			return { ...state, projects: action.payload };
+			return { ...state, projects: action.payload, isLoading: false };
 		case FETCH_PROJECT_BY_ID:
-			return { ...state, projects: action.payload };
+			return { ...state, project: action.payload };
 		case FETCH_PROJECT_BY_SEARCH:
-			return { ...state, projects: action.payload };
+			return { ...state, project: action.payload };
 		case LIKE_PROJECT:
 			return {
 				...state,
@@ -54,6 +62,10 @@ export const projectReducer = (state: any, action: actiontype | any) => {
 				projects: state.projects.filter(
 					(project: any) => project.id !== action.payload
 				),
+			};
+		default:
+			return {
+				...state,
 			};
 	}
 };

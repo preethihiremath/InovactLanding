@@ -21,7 +21,7 @@ exports.handler = (event, context) => {
         return new Promise(async (resolve, reject) => {
             const { user } = await query({
                 query: `
-                    mutation {
+                    mutation add_user {
                         insert_user(objects: [{
                             user_name: "${user_name}"
                             email_id: "${email_id}"

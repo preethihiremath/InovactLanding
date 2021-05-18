@@ -11,7 +11,7 @@ module.exports = function checkAuth(event) {
 
 		const authToken = cookie.replace('jwt=', '');
 		try {
-			let decodedToken = jwt.decode(authToken, { complete: true });
+			// let decodedToken = jwt.decode(authToken, { complete: true });
 		} catch (err) {
 			// const reason = '';
 			return reject(new Error('malformed token'));

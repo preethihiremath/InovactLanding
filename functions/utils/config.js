@@ -7,15 +7,22 @@ exports.BASE_URL = process.env.BASE_URL;
 
 exports.COOKIE_SECURE = process.env.NODE_ENV !== 'development';
 
-exports.ENDPOINT = process.env.NODE_ENV === 'development' ? '/.netlify/functions' : '/api';
+exports.ENDPOINT =
+	process.env.NODE_ENV === 'development' ? '/.netlify/functions' : '/api';
 
 // Google Credentials
 exports.GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 exports.GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
 // Github Credentials
-exports.GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
-exports.GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
+exports.GITHUB_CLIENT_ID =
+	process.env.NODE_ENV === 'development'
+		? process.env.GITHUB_DEVELOPMENT_CLIENT_ID
+		: process.env.GITHUB_CLIENT_ID;
+exports.GITHUB_CLIENT_SECRET =
+	process.env.NODE_ENV === 'development'
+		? process.env.GITHUB_DEVELOPMENT_CLIENT_SECRET
+		: process.env.GITHUB_CLIENT_SECRET;
 
 // Stripe Credentials
 exports.STRIPE_PUBLISHABLE_KEY = process.env.STRIPE_PUBLISHABLE_KEY;

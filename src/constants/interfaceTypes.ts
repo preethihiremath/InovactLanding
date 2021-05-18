@@ -8,3 +8,8 @@ export interface signupFormData {
 	email: string;
 	password: string;
 }
+
+export interface actiontype {
+	type: string;
+	payload: object | undefined;
+}

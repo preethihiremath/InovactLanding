@@ -3,7 +3,10 @@
 // https://github.com/netlify/netlify-dev-plugin/issues/147
 require('dotenv').config();
 
-exports.BASE_URL = process.env.BASE_URL;
+exports.BASE_URL =
+	process.env.NODE_ENV !== 'development'
+		? process.env.BASE_URL
+		: 'http://localhost:8888';  
 
 exports.COOKIE_SECURE = process.env.NODE_ENV !== 'development';
 

@@ -11,7 +11,6 @@ const getProject = async (event, context, callback) => {
 
 	//* This can later be changed to event.body made this for testing purpose
 	const { id } = event.queryStringParameters;
-	console.log(id);
 
 	client.on('error', (error) => {
 		console.log(error);
@@ -27,7 +26,7 @@ const getProject = async (event, context, callback) => {
 			if (resultProject) {
 				resolve({ statusCode: 200, body: JSON.stringify(resultProject) });
 			} else {
-				const data = await query({
+				const { project } = await query({
 					query: `query getProjectById{
 						project( where: {id: {_eq: ${id}}}) {
 							caption
@@ -37,6 +36,12 @@ const getProject = async (event, context, callback) => {
 							updated_at
 							url
 							user_id
+							user {
+								user_name
+								first_name
+								avatar
+								last_name
+							}
 							project_comments {
 								created_at
 								id
@@ -51,6 +56,16 @@ const getProject = async (event, context, callback) => {
 									user_name
 								}
 							}
+							project_comments_aggregate {
+								aggregate {
+									count
+								}
+							}
+							project_likes_aggregate {
+								aggregate {
+									count
+								}
+							}
 						}
 					}					
             `,
@@ -60,13 +75,12 @@ const getProject = async (event, context, callback) => {
 				//? This is where it sets the key value pair for a particular project
 				//? so that next time the same project is fetched it can return from
 				//? the cache.
-				// client.setex(`project:${id}`, 3600, JSON.stringify(project));
-				console.log(data);
-				resolve({ statusCode: 200, body: JSON.stringify(data) });
+				client.setex(`project:${id}`, 3600, JSON.stringify(project));
+				resolve({ statusCode: 200, body: JSON.stringify(project) });
 			}
 		});
 	});
 	return promise;
 };
 
-exports.handler = middy(getProject).use(requireAuth);
+exports.handler = middy(getProject).use(requireAuth());

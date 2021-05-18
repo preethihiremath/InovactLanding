@@ -18,6 +18,8 @@ function authJwt(email) {
 	return sign({ user: { email } }, SECRET);
 }
 
+console.log(GITHUB_CLIENT_ID);
+
 passport.use(
 	new GoogleStrategy(
 		{

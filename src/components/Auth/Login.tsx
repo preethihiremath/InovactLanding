@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import TestButtons from '../test';
 import '../../styles/login.css';
-import { signinFormData } from '../../constants/interfaceTypes';
+
 
 type LoginState = {
-	signinfromdata: signinFormData;
+
 	errors: object;
 };
 
@@ -17,10 +17,6 @@ class Login extends React.Component<Props, LoginState> {
 		super(props);
 
 		this.state = {
-			signinfromdata: {
-				email: '',
-				password: '',
-			},
 			errors: {},
 		};
 	}
@@ -37,20 +33,10 @@ class Login extends React.Component<Props, LoginState> {
 		// }
 		switch (key) {
 			case 'email':
-				this.setState({
-					signinfromdata: {
-						...this.state.signinfromdata,
-						email: e.currentTarget.value,
-					},
-				});
+			
 				break;
 			case 'password':
-				this.setState({
-					signinfromdata: {
-						...this.state.signinfromdata,
-						password: e.currentTarget.value,
-					},
-				});
+			      break;
 		}
 	};
 	onSubmit = (e: React.SyntheticEvent) => {
